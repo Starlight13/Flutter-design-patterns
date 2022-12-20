@@ -1,7 +1,7 @@
-import 'package:design_patterns/design_pattern/composite/file.dart';
+import 'package:design_patterns/design_pattern/composite/txt_file.dart';
 import 'package:flutter/material.dart';
 
-class Pic extends File {
+class Pic extends TxtFile {
   Pic({required super.size, required super.title});
 
   @override

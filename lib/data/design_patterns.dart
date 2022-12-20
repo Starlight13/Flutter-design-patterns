@@ -80,4 +80,8 @@ final List<DesignPattern> designPatternsList = [
         'of observed object events',
     patternClassName: PatternClassName.behavioral,
   ),
+  DesignPattern('chain_of_responsibility',
+      title: 'Chain of responsibility',
+      description: 'Pass requests along a chain of handlers',
+      patternClassName: PatternClassName.behavioral)
 ];

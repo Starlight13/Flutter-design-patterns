@@ -1,6 +1,7 @@
 import 'package:design_patterns/widget/design_pattern/abstract_factory/abstract_factory_widget.dart';
 import 'package:design_patterns/widget/design_pattern/adapter/adapter_widget.dart';
 import 'package:design_patterns/widget/design_pattern/builder/builder_widget.dart';
+import 'package:design_patterns/widget/design_pattern/chain_of_responsibility/chain_of_responsibility_widget.dart';
 import 'package:design_patterns/widget/design_pattern/composite/composite_widget.dart';
 import 'package:design_patterns/widget/design_pattern/decorator/decorator_widget.dart';
 import 'package:design_patterns/widget/design_pattern/factory_method/factory_method_widget.dart';
@@ -42,6 +43,8 @@ class DesignPatternWidgetFactory {
         return const PrototypeWidget();
       case 'observer':
         return const ObserverWidget();
+      case 'chain_of_responsibility':
+        return const ChainOfResponsibilityWidget();
     }
     return const Center(
       child: Text('Unknown design pattern'),

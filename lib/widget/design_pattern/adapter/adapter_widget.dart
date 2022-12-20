@@ -25,7 +25,7 @@ class _AdapterWidgetState extends State<AdapterWidget>
 
   final List<IBlock> fittedBlocks = [];
 
-  ValueNotifier<IBlockAdapter?> adapter = ValueNotifier(null);
+  ValueNotifier<IBlockAdapter?> currentAdapter = ValueNotifier(null);
 
   @override
   void initState() {
@@ -85,12 +85,12 @@ class _AdapterWidgetState extends State<AdapterWidget>
               children: holes.map((hole) {
                 return DragTarget<IBlock>(
                   onLeave: (data) {
-                    adapter.value = null;
+                    currentAdapter.value = null;
                   },
                   onWillAccept: (block) {
                     if (block != null) {
-                      adapter.value = hole.getAdapterForBlock(block);
-                      return hole.canFit(adapter.value ?? block);
+                      currentAdapter.value = hole.getAdapterForBlock(block);
+                      return hole.canFit(currentAdapter.value ?? block);
                     }
                     return false;
                   },
@@ -104,7 +104,7 @@ class _AdapterWidgetState extends State<AdapterWidget>
                   onAccept: (block) {
                     setState(() {
                       blocks.remove(block);
-                      hole.fittedBlocks.add(adapter.value ?? block);
+                      hole.fittedBlocks.add(currentAdapter.value ?? block);
                     });
                   },
                 );
@@ -124,10 +124,10 @@ class _AdapterWidgetState extends State<AdapterWidget>
                   feedback: Opacity(
                     opacity: 0.8,
                     child: ValueListenableBuilder(
-                      valueListenable: adapter,
+                      valueListenable: currentAdapter,
                       builder: (context, value, child) {
-                        return adapter.value?.adaptedBlock == block
-                            ? CustomPaint(painter: adapter.value)
+                        return currentAdapter.value?.adaptedBlock == block
+                            ? CustomPaint(painter: currentAdapter.value)
                             : CustomPaint(painter: block);
                       },
                     ),

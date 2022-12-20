@@ -10,11 +10,7 @@ class EmailNotifierDecorator extends NotifierDecorator {
     return [
       MessageWidget(
         message: message,
-        appIcon: SizedBox(
-          height: 50.0,
-          width: 50.0,
-          child: Image.asset('assets/app_icon_assets/gmail.jpeg'),
-        ),
+        appIcon: Image.asset('assets/app_icon_assets/gmail.jpeg'),
         appName: 'Gmail',
       ),
       ...super.displayMessage(message),

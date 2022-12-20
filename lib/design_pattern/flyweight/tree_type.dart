@@ -4,5 +4,8 @@ class TreeType {
   final String name;
   final ui.Image sprite;
 
-  TreeType({required this.name, required this.sprite});
+  TreeType({
+    required this.name,
+    required this.sprite,
+  });
 }
