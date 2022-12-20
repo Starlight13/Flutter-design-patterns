@@ -6,6 +6,7 @@ import 'package:design_patterns/widget/design_pattern/composite/composite_widget
 import 'package:design_patterns/widget/design_pattern/decorator/decorator_widget.dart';
 import 'package:design_patterns/widget/design_pattern/factory_method/factory_method_widget.dart';
 import 'package:design_patterns/widget/design_pattern/flyweight/flyweight_widget.dart';
+import 'package:design_patterns/widget/design_pattern/mediator/mediator_widget.dart';
 import 'package:design_patterns/widget/design_pattern/memento/memento_widget.dart';
 import 'package:design_patterns/widget/design_pattern/observer/observer_widget.dart';
 import 'package:design_patterns/widget/design_pattern/prototype/prototype_widget.dart';
@@ -45,6 +46,8 @@ class DesignPatternWidgetFactory {
         return const ObserverWidget();
       case 'chain_of_responsibility':
         return const ChainOfResponsibilityWidget();
+      case 'mediator':
+        return const MediatorWidget();
     }
     return const Center(
       child: Text('Unknown design pattern'),

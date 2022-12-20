@@ -83,5 +83,11 @@ final List<DesignPattern> designPatternsList = [
   DesignPattern('chain_of_responsibility',
       title: 'Chain of responsibility',
       description: 'Pass requests along a chain of handlers',
-      patternClassName: PatternClassName.behavioral)
+      patternClassName: PatternClassName.behavioral),
+  DesignPattern(
+    'mediator',
+    title: 'Mediator',
+    description: 'Let objects communicate through a mediator object',
+    patternClassName: PatternClassName.behavioral,
+  )
 ];
