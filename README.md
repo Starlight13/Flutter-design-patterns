@@ -20,6 +20,8 @@ A Flutter project demonstrating various design patterns.
     - Strategy
     - Memento
     - Observer
+    - Chain of responsibility
+    - Mediator
 
 ## Additional information
 
